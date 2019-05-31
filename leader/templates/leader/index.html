@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src='js/bootstrap.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body style="background-image: linear-gradient(to right, #9fb8ad 0%, #1fc8db 51%, #2cb5e8);">
+        <div class="card bg-light mx-auto mt-4 border border-info" style="max-width: 700px; border-radius: 20px">
+                <article class="card-body mx-auto" style="min-width: 400px">
+                    <h3 class="card-title mt-3 text-center text-info">Create New Member</h3>
+<!--                    action="{% url 'leader:index' %}"-->
+                    <form  method="post">
+                         {% csrf_token %} 
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                             </div>
+                            <input name="name" class="form-control" placeholder="Full name" type="text">
+                        </div> 
+                                             
+                        <button type="submit" class="btn btn-info" value="submit">Submit</button>                                                               
+                    </form>
+                </article>
+                </div>
+    
+</body>
+</html>
